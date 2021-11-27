@@ -1,0 +1,239 @@
+* {
+	padding:0;
+	margin:0;
+	font-family: sans-serif;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+.medsos {
+	padding:5px 0;
+	background-color: #3498DB;
+}
+.medsos ul li {
+	display: inline-block;
+	color: #fff;
+	margin-right: 10px;
+}
+.container {
+	width:80%;
+	margin:0 auto;
+}
+.container:after {
+	content:'';
+	display: block;
+	clear: both;
+}
+header h1 {
+	float: left;
+	padding:15px 0;
+	color:#3498DB;
+}
+header ul {
+	float: right;
+}
+header ul li {
+	display: inline-block;
+}
+header ul li a {
+	padding:25px 20px;
+	display: inline-block;
+}
+header ul li a:hover {
+	background-color: #3498DB;
+	color: #fff;
+
+
+}
+.banner {
+	height: 60vh;
+	background-image: url("../banner2.jpg");
+	background-size: cover;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.banner:after {
+	content:'';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(87, 150, 209, 0.671);
+}
+.banner h2 {
+	color: #fff;
+	z-index: 1;
+	padding: 20px 25px;
+	border:3px solid #fff;
+}
+section {
+	padding:50px 0;
+}
+section h3 {
+	text-align: center;
+	padding:20px 0;
+	color: #3498DB;
+	margin-bottom: 25px;
+}
+.about,
+.service {
+	padding-bottom: 100px;
+}
+.about p {
+	color: #666;
+	word-spacing: 2px;
+	line-height: 25px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.service {
+	background-color: #f9f9f9;
+}
+.box {
+	color: #3498DB;
+}
+.box:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.box .col-4 {
+	width:25%;
+	padding:20px;
+	box-sizing: border-box;
+	text-align: center;
+	float: left;
+	
+
+
+}
+.box .col-4 h4 {
+	margin:20px 0;
+}
+footer {
+	padding:30px 0;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+}
+.bg-loader {
+	background-color: #eee;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bg-loader .loader {
+	width:100px;
+	height: 100px;
+	border:3px solid #fff;
+	border-radius: 50%;
+	border-top-color: #3498DB;
+	border-right-color: #3498DB;
+	border-bottom-color: #3498DB;
+	animation: puterin .8s linear infinite;
+}
+.label {
+	background-color: #3498DB;
+	color: #fff;
+}
+@keyframes puterin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@media screen and (max-width: 768px){
+	.container {
+		width:90%;
+	}
+	header h1 {
+		text-align: center;
+		float: none;
+	}
+	header ul {
+		text-align: center;
+		float: none;
+	}
+	.box .col-4 {
+		width:100%;
+		float: none;
+		margin-bottom: 20px;
+	}
+}
+.produk{
+	padding:5px 0;
+	background-color: #3498DB;
+}
+.small-container{
+	max-width: 1000px;
+	margin: auto;
+	padding-left: 25px;
+	padding: right 20px; ;
+}
+.row{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.single-product{
+	margin-top: 80px;
+}
+.col-2{
+	flex-basis: 50%;
+	line-height: 60px;
+	margin: 25px 0;
+}
+html, body{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	font-family: 'roboto', sans-serif;
+}
+.kontener{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 15px;
+	display: flex;
+}
+.left{
+	width: 65%;
+	position: relative;
+}
+.right{
+	width: 35%;
+	margin-top: 60px;
+}
+.deskripsi{
+	border-bottom: 1px solid #333;
+	margin-bottom: 20px;
+}
+.deskripsi span{
+	font-size: 12px;
+	letter-spacing: 1px;
+	color: #333;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.deskripsi h1{
+	font-weight: 300;
+	font-size: 52px;
+	color: black;
+	letter-spacing: -2px;
+}
+.deskripsi p{
+	font-size: 16px;
+	font-weight: 300;
+	color: black;
+	line-height: 24px;
+}

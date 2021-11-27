@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokipedia</title>
+    <link rel="stylesheet" href="latihan8.css">
+    <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+      <!-- header -->
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-md-0 h1">Jokipedia</span>
+        </div>
+    </nav>
+    <!-- akhir header -->
+
+    <!-- Sidebar -->
+    <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
+        <ul class="nav flex-column text-white w-100">
+            <a href="#" class="nav-link h3 text-white my-2">
+                Navigation
+            </a>
+            <li><a href="./latihan8.html" class="nav-link">
+                <span class="mx-2">Beranda</span>
+            </li>
+            <li><a href="./tentang8.html" class="nav-link">
+                <span class="mx-2">Tentang</span>
+            </li>
+            <li><a href="./kontak8.html" class="nav-link">
+                <span class="mx-2">Kontak</span>
+            </li>
+          
+        </ul>
+    </div>
+    <!-- Akhir sidebar -->
+
+    <!-- Toogle Sidebar -->
+    <div class="p-1 my-container active-cont">
+        <a class="btn border-2" id="menu-btn">
+            <i class="bx bx-menu">=</i>
+        </a>
+    </div>
+</body>
+
+<!-- Sidebar JS -->
+<script>
+    var menu_btn = document.querySelector("#menu-btn");
+    var sidebar = document.querySelector("#sidebar");
+    var container = document.querySelector(".my-container");
+    menu_btn.addEventListener("click", () => {
+        sidebar.classList.toggle("active-nav");
+        container.classList.toggle("active-cont");
+    });
+</script>
+<!-- About -->
+<div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Profil Jokipedia</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae quae animi debitis natus odit libero velit repellendus nostrum? Deleniti repudiandae hic libero quam numquam est error, labore nostrum quasi. Asperiores nostrum in fugiat repudiandae porro aut hic quibusdam, totam aliquid.</p>
+    </div>
+    <br>
+    <div class="container">  
+        <h2>Keunggulan Jokipedia :</h2>
+        <p>Jokipedia memiliki keunggulan yaitu Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptas commodi ea veritatis assumenda quae, alias nisi. Quae, laborum error? </p>
+        <br>
+        <h2>Manfaat Jokipedia :</h2>
+        <p>Manfaat anda menggunakan Jokipedia Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum laudantium ducimus doloribus maiores minima dolorum, expedita neque eos distinctio culpa?</p>
+        <p><a class="btn btn-dark btn-lg" href="./latihan8.html" role="button">Kembali &raquo;</a></p> 
+  </div>
+  <br>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#273036" fill-opacity="1" d="M0,256L40,250.7C80,245,160,235,240,208C320,181,400,139,480,128C560,117,640,139,720,160C800,181,880,203,960,197.3C1040,192,1120,160,1200,133.3C1280,107,1360,85,1400,74.7L1440,64L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+ <!-- FOOTER -->
+ <div class="text-center p-3" style="background-color: #273036; color: white;">© 2021
+    Copyright: Hafid Al Azhar 
+    
+</div>
+</body>
+</html>l

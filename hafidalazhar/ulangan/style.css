@@ -1,0 +1,21 @@
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#header{
+    background-color: #cccccc;
+    height: 100px;
+    padding: 5px;
+
+}
+#menu{
+    background-color: darkcyan;
+    height: 30px;
+    padding: 5px;
+
+}
+#konten{
+    float: left;
+    padding: 5px;
+}

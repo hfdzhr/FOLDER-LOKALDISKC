@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 5</title>
+</head>
+<body>
+    <center><h1>Konversi Waktu</h1></center>
+    <center><input type="number" id="input" placeholder="Silahkan Masukan Detik">
+<button id="btn">Konversi</button>
+<p id="result"></p></center>
+   <script>
+ var x, y, jam, menit, detik, hari
+    input  = document.getElementById('input'),
+    btn    = document.getElementById('btn'),
+    result = document.getElementById('result');
+
+btn.addEventListener('click', function(){
+  x     = input.value;
+  y     = x % 3600;
+  hari = x / 86400
+  jam   = x / 3600;
+  menit = y / 60;
+  detik = y % 60;
+
+  
+
+  result.innerHTML = Math.floor(hari) + ' Hari '+ Math.floor(jam) + ' Jam ' + Math.floor(menit) + ' Menit ' + Math.floor(detik) + ' Detik ';
+});
+   </script>
+</body>
+</html>

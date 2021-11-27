@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Latihan 7</title>
+        </head>  
+        <script>
+            var nama = prompt('Masukan Nama Anda : ');
+                document.write("  Nama : " + nama + "</br>")
+                var nis = prompt('Masukan NIS Anda : ');
+                document.write("  NIS : " + nis + "</br>")
+
+        </script>
+        <script>
+            function proses(){
+                var a;
+                a = parseInt(document.getElementById("nilai1").value);
+                var b;
+                b = parseInt(document.getElementById("nilai2").value);
+                var c;
+                c = parseInt(document.getElementById("nilai3").value);
+            var hasil;
+            var avg;
+            
+            hasil = a + b + c
+            avg = hasil / 3
+
+            document.write('Menghitung Nilai Rata Rata' + "</br>")
+            document.write('Nama : ' + nama + "</br>")
+            document.write('NIS : ' + nis + "</br>")
+            document.write('Nilai Rata Rata Anda : ' + Math.floor(avg) + "</br>" )
+            }
+        
+        </script>
+        <h3>Menghitung Nilai Rata Rata : </h3>
+        <label><b>Nilai UTS : </b></label>
+        <input id="nilai1" type="number" placeholder="Masukan Nilai UTS">
+        <br>
+        <br>
+        <label><b>Nilai Tugas : </b></label>
+        <input id="nilai2" type="number" placeholder="Masukan Nilai Tugas">
+        <br>
+        <br>
+        <label><b>Nilai UAS : </b></label>
+        <input id="nilai3" type="number" placeholder="Masukan Nilai UAS">
+        <input type="button" value="Hitung" onclick="proses()">
+        </body>
+        </html>

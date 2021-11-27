@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 6</title>
+</head>
+<body>
+ <script>
+     function proses(){
+         var c;
+         c = parseInt(document.getElementById("lblcelcius").value);
+         var kelvin;
+         var fahrenheit;
+         var reamur;
+         
+         kelvin = c + 273.25
+         fahrenheit = (c * 1.8) + 32;
+         reamur = c * 0.8;
+
+         result.innerHTML = Math.floor(kelvin) +  ' Kelvin : '  + Math.floor(fahrenheit) + ' Fahrenheit : ' + Math.floor(reamur) +  ' Reamur ' 
+     }
+     function reset(){
+         document.getElementById("1b1detk").value = "";
+         document.getElementById("result").innerHTML = "Masukan Kembali";
+     }
+ </script>
+</body>
+<center><h1>Konversi Suhu</h1></center>
+<center>
+    <label><b>Input</b></label>
+    <input id="lblcelcius" type="number" placeholder="Masukan Suhu">
+    <label><b>Celcius</b></label>
+    <p>
+        <input type="button" value="Konversi" onclick="proses()">
+    </p>
+    <p>
+        <label><b>Hasil : </b></label>
+    </p>
+    <label id="result"></label>
+</center>
+</html>
