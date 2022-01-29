@@ -39,6 +39,7 @@
         var barang = document.getElementById("brg").value;
         var total = document.getElementById("ttl").value;
 
+            // Proses penghitungan
         if (ongkir == 1){
             hasil = barang * 50000;
             document.getElementById("harga").innerHTML = hasil
@@ -54,6 +55,8 @@
             document.getElementById("harga").innerHTML = hasil
             totalharga = total - hasil
             document.getElementById("kembalian").innerHTML = totalharga
+
+            // Jika kurang atau pas
         } if (totalharga <= -1) {
             kurang = ("Uang anda kurang")
             document.getElementById("kembalian").innerHTML = kurang
