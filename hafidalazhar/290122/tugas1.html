@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Input</title>
+</head>
+<body>
+    <h3>Hasil</h3>
+    <p id="hasil"></p>
+</body>
+<script>
+    // Variable
+    var nama = prompt("Silahkan masukan 3 nama makanan ? ");
+    var array = [];
+
+    // Process
+    if(nama){
+			array.push(nama);
+			var nama = prompt("Silahkan masukan lagi : ");
+			if(nama){
+				array.push(nama);
+				var nama = prompt("Masukan Lagi : ");
+				if(nama){
+					array.push(nama);
+					document.getElementById("hasil").innerHTML = "Makanan yang anda pilih  : "+ array;
+				}else{
+					document.getElementById("hasil").innerHTML = "Makanan yang anda pilih  : "+ array;
+				}
+			}else{
+				document.getElementById("hasil").innerHTML = "Makanan yang anda pilih  : "+ array;
+
+			}
+		}
+
+</script>
+</html>
