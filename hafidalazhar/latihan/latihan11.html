@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pickup</title>
+</head>
+<body>
+    <h1>Pickup</h1> <br>
+    <!-- Option -->
+    <label for="">Lokasi : </label>
+    <select name="ongkir" id="ongkir">
+        <option value="1">Surabaya</option>
+        <option value="2">Makassar</option>
+        <option value="3">Jayapura</option>
+    </select> <br><br>
+    <label for="">Kota Asal : Bandung</label> <br> <br>
+    <!-- Berat Brang -->
+    <form action="#" id="barang">
+        <label for="nmb">Berat barang : </label>
+        <input type="number" id="brg" name="number" placeholder="Kg">
+    </form> <br>
+    <!-- Pembayaran -->
+    <form action="#" id="total">
+        <label for="nmb">Pembayaran :  </label>
+        <input type="number" id="ttl" name="number" placeholder="Pembayaran">
+    </form>
+    <!-- Total harga -->
+        <br>Total Harga : <p id="harga"></p>
+        Kembalian : <p id="kembalian"></p>
+
+        <input type="button" value="Hitung" onclick="hitung()">
+  
+</body>
+<script>
+    function hitung(){
+        var ongkir = document.getElementById("ongkir").value;
+        var barang = document.getElementById("brg").value;
+        var total = document.getElementById("ttl").value;
+
+        if (ongkir == 1){
+            hasil = barang * 50000;
+            document.getElementById("harga").innerHTML = hasil
+            totalharga = total - hasil
+            document.getElementById("kembalian").innerHTML = totalharga
+        } else if (ongkir == 2){
+            hasil = barang * 70000;
+            document.getElementById("harga").innerHTML = hasil
+            totalharga = total - hasil
+            document.getElementById("kembalian").innerHTML = totalharga
+        } else if (ongkir == 3){
+            hasil = barang * 90000;
+            document.getElementById("harga").innerHTML = hasil
+            totalharga = total - hasil
+            document.getElementById("kembalian").innerHTML = totalharga
+        } if (totalharga <= -1) {
+            kurang = ("Uang anda kurang")
+            document.getElementById("kembalian").innerHTML = kurang
+        } else if (totalharga == 0) {
+            pas = ("Uang anda pas")
+            document.getElementById("kembalian").innerHTML = pas
+        }
+        
+    }
+</script>
+</html>

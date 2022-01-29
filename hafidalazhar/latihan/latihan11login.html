@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <center><h1>Login   </h1></center>
+    <center>Username: <input type="text" placeholder="Username" id="usn"> <br><br>
+    Password: <input type="password" name="psw" id="psw" placeholder="Password"> <br><br>
+    <input type="button" value="Login" onclick="login()">
+    </center>
+</body>
+<script>
+    function login() {
+        var username = document.getElementById("usn").value;
+        var password = document.getElementById("psw").value;
+        if (username == "admin" && password == "1234"){
+            alert("Login Sukses")
+            window.location = "latihan11.html"
+        } else if (username == "" && password == "") {
+            alert ("Silahkan isi username dan password")
+        } else alert("Password Salah")
+     }
+</script>
+</html>
