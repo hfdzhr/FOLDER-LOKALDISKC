@@ -1,0 +1,145 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Warindo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- Login HTML -->
+    <div class="container">
+        <div class="login text-xl-center">
+            <div class="content">
+                <div class="header">
+                    <h4 class="tittle">Manager Login</h4>
+                </div>
+                <div class="body text-xl-center">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email" required="required" id="username">
+                    </div>
+                    <div class="from-group"></div>
+                    <input type="password" class="form-control" placeholder="Password" id="password">
+                </div>
+                <div class="from-group pt-lg-3">
+                    <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login" onclick="Validate()">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+<style>
+    .container {
+        position: absolute;
+        left: 38%;
+        padding-top: 15%;
+    }
+
+
+    .form-group .btn {
+        padding: 30%;
+    }
+
+
+    .login {
+        width: 350px;
+        padding: 20px;
+        margin: 250px auto;
+        margin-right: auto;
+        margin-left: 500px;
+
+
+
+    }
+
+    .login .content {
+        padding: 20px;
+        border-radius: 20px;
+        border: none;
+    }
+
+    .header {
+        border-bottom: none;
+        position: relative;
+        justify-content: center;
+    }
+
+    .login h4 {
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .login .form-group {
+        position: relative;
+    }
+
+    .login i {
+        position: absolute;
+        left: 13px;
+        top: 11px;
+        font-size: 18px;
+    }
+
+    .login .form-control {
+        padding-left: 40px;
+    }
+
+    .login .form-control:focus {
+        border-color: #00ce81;
+    }
+
+    .login .form-control,
+    .login .btn {
+        min-height: 40px;
+        padding-top: 10px;
+    }
+
+    .login .btn .login .btn:active {
+        border: none;
+        background: #00ce81 !important;
+        line-height: normal;
+    }
+
+    .login {
+        background: #ecf0f1;
+        border-color: #dee4e7;
+        text-align: center;
+        margin: 0 -20px -20px;
+        border-radius: 5px;
+        font-size: 13px;
+        justify-content: center;
+    }
+</style>
+<script src="../cafe/package/dist/sweetalert2.all.min.js"></script>
+<script>
+    function Validate() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username == "hafid@gmail.com" && password == "hafid123") {
+            Swal.fire({
+                icon: 'success',
+                title: 'Login berhasil',
+                text: 'Selamat berbelanja',
+            }).then(function () {
+                window.location = "chekout.html";
+            });
+        } else if (username == "" && password == "") {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Username & Password kosong',
+                text: 'Silahkan isi Username dan Password',
+            });
+        } else Swal.fire({
+            icon: 'error',
+            title: 'Oops, Username atau Password salah',
+            text: 'Silahkan isi Username dan Password dengan benar',
+        });
+
+    }
+</script>
+
+</html>
