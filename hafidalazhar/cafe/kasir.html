@@ -43,7 +43,9 @@
 
     <div class="container mt-md-3">
       <center>
-        <h1 style="font-family: 'Roboto', sans-serif">Kasir</h1>
+        <h1 style="font-family: 'Roboto', sans-serif; padding-top: 1cm">
+          Kasir
+        </h1>
       </center>
 
       <!-- Form Kasir -->
@@ -74,7 +76,16 @@
           name="qty"
         />
       </div>
-      <br />
+      <div class="mb-3">
+        <label for="qty" class="form-label">Total Pembayaran : </label>
+        <input
+          type="number"
+          class="form-control"
+          id="tp"
+          placeholder="Masukan Pembayaran"
+          name="tp"
+        />
+      </div>
 
       <br />
       <button type="button" class="btn btn-warning float-end" onclick="i()">
@@ -82,8 +93,10 @@
       </button>
       <div class="float-start">Total Harga : <b id="total"></b></div>
       <br /><br />
-      <div class="float-start">Nomor Antrian : <b id="nma"></b></div>
+      <div class="float-start">Kembalian : <b id="tpa"></b></div>
       <br />
+      <br />
+      <div class="float-start">Nomor Antrian : <b id="nma"></b></div>
     </div>
   </body>
   <script>
@@ -91,19 +104,33 @@
       var option = document.getElementById("option").value;
       var antrian = document.getElementById("antrian").value;
       var qty = document.getElementById("qty").value;
+      var tp = document.getElementById("tp").value;
 
       if (option == 1) {
         hasil = 20000 * qty;
+        total = tp - hasil;
         document.getElementById("total").innerHTML = hasil;
         document.getElementById("nma").innerHTML = antrian;
+        document.getElementById("tpa").innerHTML = total;
       } else if (option == 2) {
         hasil = 30000 * qty;
+        total = tp - hasil;
         document.getElementById("total").innerHTML = hasil;
         document.getElementById("nma").innerHTML = antrian;
+        document.getElementById("tpa").innerHTML = total;
       } else if (option == 3) {
         hasil = 40000 * qty;
+        total = tp - hasil;
         document.getElementById("total").innerHTML = hasil;
         document.getElementById("nma").innerHTML = antrian;
+        document.getElementById("tpa").innerHTML = total;
+      }
+      if (total <= -1) {
+        kurang = "Uang anda kurang";
+        document.getElementById("tpa").innerHTML = kurang;
+      } else if (total == 0) {
+        pas = "Uang anda pas ";
+        document.getElementById("tpa").innerHTML = pas;
       }
     }
   </script>

@@ -119,13 +119,13 @@
     function Validate() {
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
-        if (username == "hafid@gmail.com" && password == "hafid123") {
+        if (username == "admin" && password == "admin") {
             Swal.fire({
                 icon: 'success',
                 title: 'Login berhasil',
                 text: 'Selamat berbelanja',
             }).then(function () {
-                window.location = "chekout.html";
+                window.location = "manager.html";
             });
         } else if (username == "" && password == "") {
             Swal.fire({
