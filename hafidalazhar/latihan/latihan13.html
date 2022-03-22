@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan 13</title>
+  </head>
+  <body>
+    <center>
+      <h1>Menghitung Bangun Datar</h1>
+      <form action="">
+        Pilih Bangun Datar :
+        <select name="" id="list">
+          <option value="1">Jajar Genjang</option>
+          <option value="2">Segitiga</option>
+          <option value="3">Persegi Panjang</option>
+          <option value="4">Lingkaran</option>
+          <option value="5">Belah Ketupat</option>
+        </select>
+      </form>
+      <br />
+      Panjang / Alas : <input type="number" name="" id="panjang" /><br />
+      <br />
+      Lebar / Tinggi: <input type="number" name="" id="lebar" /> <br />
+      <br />
+      <b>Lingkaran : </b><br /><br />
+      Jari (Untuk Lingkaran): <input type="number" name="" id="jari" /> <br />
+      <br />
+      <b>Belah Ketupat : </b><br /><br />
+      Diagonal 1 (Untuk Belah Ketupat): <input type="number" name="" id="d1" />
+      <br />
+      <br />
+      Diagonal 2 (Untuk Belah Ketupat): <input type="number" name="" id="d2" />
+      <br />
+      <br />
+      Sisi (Untuk Belah Ketupat): <input type="number" name="" id="s" /> <br />
+      <br />
+      <input type="button" value="Hitung" onclick="test()" /> <br /><br />
+
+      Luas :
+      <p><b id="luas"></b></p>
+      Keliling :
+      <p><b id="kel"></b></p>
+    </center>
+  </body>
+</html>
+<script>
+  var panjang = document.getElementById("panjang");
+  var lebar = document.getElementById("lebar");
+  var jari = document.getElementById("jari");
+  var list = document.getElementById("list");
+  var d1 = document.getElementById("d1");
+  var d2 = document.getElementById("d2");
+  var s = document.getElementById("s");
+
+  function test() {
+    if (list.value == 1) {
+      function jajargenjang() {
+        luasjg = parseInt(panjang.value) * parseInt(lebar.value);
+        keljg = 2 * (parseInt(panjang.value) + parseInt(lebar.value));
+        document.getElementById("luas").innerHTML = luasjg + "cm";
+        document.getElementById("kel").innerHTML = keljg + "cm";
+      }
+      jajargenjang();
+    } else if (list.value == 2) {
+      function segitiga() {
+        luassg = 0.5 * (parseInt(panjang.value) * parseInt(lebar.value));
+        kelsg = 3 * parseInt(lebar.value);
+        document.getElementById("luas").innerHTML = luassg + "cm";
+        document.getElementById("kel").innerHTML = kelsg + "cm";
+      }
+      segitiga();
+    } else if (list.value == 3) {
+      function pp() {
+        luaspp = parseInt(panjang.value) * parseInt(lebar.value);
+        kelpp = 2 * (parseInt(panjang.value) + parseInt(lebar.value));
+        document.getElementById("luas").innerHTML = luaspp + "cm";
+        document.getElementById("kel").innerHTML = kelpp + "cm";
+      }
+      pp();
+    } else if (list.value == 4) {
+      function lingkaran() {
+        luasl = 2 * (parseInt(jari.value) * 2);
+        kell = 3.14 * (parseInt(jari.value) * 2);
+        document.getElementById("luas").innerHTML = luasl + "cm";
+        document.getElementById("kel").innerHTML = kell + "cm";
+      }
+      lingkaran();
+    } else {
+      function bk() {
+        luasbk = 0.5 * (parseInt(d1.value) * parseInt(d2.value));
+        kelbk = 4 * parseInt(s.value);
+        document.getElementById("luas").innerHTML = luasbk + "cm";
+        document.getElementById("kel").innerHTML = kelbk + "cm";
+      }
+      bk();
+    }
+  }
+</script>
