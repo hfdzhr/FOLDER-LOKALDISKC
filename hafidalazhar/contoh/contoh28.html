@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object 14-04-22</title>
+</head>
+<body>
+    <script>
+        // Inisialisasi object dan property
+        var mahasiswa = {
+            nama: "Ujang recing",
+            kelas: "TIF RP 18 CID",
+            ipk: 3.80,
+            semester: 4,
+
+            //   Insialisasi method
+            makan: function () {
+                return "Manusia makan "
+            },
+            minum: function () {
+                return "Manusia minum"
+            },
+            belajar: function () {
+                return "Manusia belajar"
+            },
+            berjalan: function () {
+                return "Manusia berjalan"
+            }
+        };
+
+        // Menambah Property
+        mahasiswa.ipk = 3.80;
+        mahasiswa.semester = 4;
+
+        // Menampilkan object dan property yang sudah dibuat
+        document.writeln("1. Object Property" + "<br>")
+        document.write("<br>") 
+        document.write("Nama : " + mahasiswa.nama + "<br>") 
+        document.write("Kelas : " + mahasiswa.kelas + "<br>") 
+        document.write("Ipk : " + mahasiswa.ipk + "<br>") 
+        document.write("Semester : " + mahasiswa.semester + "<br>") 
+
+        // Menampilkan object dan property yang sudah dibuat
+        document.write("<br>") 
+        document.writeln("2. Mengubah Object Property" + "<br>")
+        document.write("<br>") 
+        document.write("Nama : " + mahasiswa.nama + "<br>")
+
+        // Mengubah object property
+        mahasiswa.nama = "Amalia"
+        document.write("Nama : " + mahasiswa.nama + "<br>")
+        document.write("<br>")
+        document.write("Kelas : " + mahasiswa.kelas + "<br>")
+        // Mengubah object property
+        mahasiswa.kelas = "X RPL 2"
+        document.write("Kelas : " + mahasiswa.kelas + "<br>")
+        document.write("<br>")
+        document.write("Ipk : " + mahasiswa.ipk + "<br>")
+        // Mengubah object property
+        mahasiswa.ipk = 90;
+        document.write("Ipk : " + mahasiswa.ipk + "<br>")
+        document.write("<br>")
+        document.write("Semester : " + mahasiswa.semester + "<br>")
+        // Mengubah object property
+        mahasiswa.semester = 2;
+        document.write("Semester : " + mahasiswa.semester + "<br>")
+
+        document.write("<br>")
+        document.writeln("3. Object Property" + "<br>")
+        document.write("Method 1 manusia : " + mahasiswa.makan() + "<br>" )
+        document.write("Method 2 manusia : " + mahasiswa.minum() + "<br>" )
+        document.write("Method 3 manusia : " + mahasiswa.belajar() + "<br>" )
+        document.write("Method 4 manusia : " + mahasiswa.berjalan() + "<br>" )
+
+        // Inisialisasi Object Method
+        var mahasiswa = {        
+            //   Insialisasi method
+            makan: function (makanan) {
+                return "Manusia makan " + makanan
+            },
+            minum: function (air) {
+                return "Manusia minum " + air
+            },
+            belajar: function (mapel) {
+                return "Manusia belajar " + mapel
+            }, 
+            berjalan: function (tempat) {
+                return "Manusia berjalan " + tempat
+            }
+        };
+
+        // Menampilkan Method Object
+        document.write("<br>")
+        document.writeln("4. Mengubah Object Method" + "<br>")
+        document.write("Method 1 manusia : " + mahasiswa.makan("Ikan") + "<br>" )
+        document.write("Method 2 manusia : " + mahasiswa.minum("Air") + "<br>" )
+        document.write("Method 3 manusia : " + mahasiswa.belajar("IPS") + "<br>" )
+        document.write("Method 3 manusia : " + mahasiswa.berjalan("Ke Bandung") + "<br>" )
+        </script>
+</body>
+</html>
