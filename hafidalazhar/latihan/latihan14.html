@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Gaji</title>
+</head>
+<body>
+    <label for="golongan">Golongan :</label>
+    <select name="golongan" id="golongan">
+        <option value="1">Golongan 1</option>
+        <option value="2"> Golongan 2</option>
+        <option value="3"> Golongan 3</option>
+    </select>
+    <br>
+    <label for="tdkkel">Tidak berkeluarga : </label>
+    <input type="radio" name="tdkkel" id="tdkkel">
+    <br>
+    <label for="kel">Berkeluarga : </label>
+    <input type="radio" name="kel" id="kel">
+    <br>
+    <button id="Hitung">Hitung</button>
+</body>
+<script>
+    var golongan = document.getElementById('golongan').value
+    var tdkBerkeluarga = document.getElementById('tdkkel')
+    var berkeluarga = document.getElementById('kel')  
+</script>   
+</html>

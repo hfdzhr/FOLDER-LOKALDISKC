@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="table">
+        <h3 align="center" style="font-family: Arial, Helvetica, sans-serif;">Tugas Object Table</h3>
+        <table>
+            <tr>
+                <th>No.</th>
+                <th>Object</th>
+                <th>Property</th>
+                <th>Method</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td id="obj1"></td>
+                <td id="prop1"></td>
+                <td id="method1"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td id="obj2"></td>
+                <td id="prop2"></td>
+                <td id="method2"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td id="obj3"></td>
+                <td id="prop3"></td>
+                <td id="method3"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td id="obj4"></td>
+                <td id="prop4"></td>
+                <td id="method4"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td id="obj5"></td>
+                <td id="prop5"></td>
+                <td id="method5"></td>
+            </tr>
+        </table>
+    </div>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .table {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script>
+        function Mobil() {
+            this.mobil = "Mobil"
+            this.name = "Mazda"
+            this.model = "RX-7"
+            this.color = "Blue"
+            this.obj = function () {
+                document.getElementById('obj1').innerHTML = (
+                    `${this.mobil}`
+                )
+            }
+            this.prop = function () {
+                document.getElementById('prop1').innerHTML = (
+                    ` -${this.name} <br> -${this.model} <br> -${this.color}`)
+            }
+            this.start = function () {
+                return 'Mobil Berjalan'
+            }
+            this.stop = function () {
+                return 'Mobil Stop'
+            }
+            this.method = function () {
+                document.getElementById("method1").innerHTML = (
+                    `-${this.start()}<br>
+                    -${this.stop()}<br> 
+                    `
+                )
+            }
+        }
+        const pgl = new Mobil()
+        pgl.prop()
+        pgl.method()
+        pgl.obj()
+
+
+        function Hewan() {
+            this.hewan = "Jerapah"
+            this.tinggi = "5m"
+            this.kaki = "4 Kaki"
+            this.warna = "Kuning"
+            this.obj = function () {
+                document.getElementById('obj2').innerHTML = (
+                    `${this.hewan}`
+                )
+            }
+            this.prop = function () {
+                document.getElementById('prop2').innerHTML = (
+                    `-${this.tinggi} <br>
+                    -${this.kaki} <br>
+                    -${this.warna}<br>
+                    `)
+            }
+            this.makan = function () {
+                return 'Jerapah sedang makan'
+            }
+            this.minum = function () {
+                return 'Jerapah sedang minum'
+            }
+            this.method = function () {
+                document.getElementById("method2").innerHTML = (
+                    `-${this.makan()}<br>
+                    -${this.minum()}<br> 
+                    `
+                )
+            }
+        }
+        const panggil = new Hewan()
+        panggil.obj()
+        panggil.prop()
+        panggil.method()
+
+        function Electronic() {
+            this.barang = "Kulkas"
+            this.tinggi = "1m"
+            this.listrik = "20watt"
+            this.warna = "Hitam"
+            this.obj = function () {
+                document.getElementById('obj3').innerHTML = (
+                    `${this.barang}`
+                )
+            }
+            this.prop = function () {
+                document.getElementById('prop3').innerHTML = (
+                    `-${this.tinggi} <br>
+                    -${this.listrik} <br>
+                    -${this.warna} <br>
+                    `
+                )
+            }
+            this.nyala = function () {
+                return 'Kulkas menyala'
+            }
+            this.mati = function () {
+                return 'Kulkas mati'
+            }
+            this.method = function () {
+                document.getElementById('method3').innerHTML = (
+                    `
+                    -${this.nyala()} <br>
+                    -${this.mati()}
+                    
+                    `
+                )
+            }
+        }
+        const tampil = new Electronic()
+        tampil.obj()
+        tampil.prop()
+        tampil.method()
+
+
+        function Transportasi() {
+            this.kendaraan = "Bus"
+            this.lebar = "9m"
+            this.merk = "Mercedez"
+            this.model = "OH 1626"
+            this.obj = function () {
+                document.getElementById('obj4').innerHTML = (
+                    `${this.kendaraan}`
+                )
+            }
+            this.prop = function () {
+                document.getElementById('prop4').innerHTML = (
+                    `-${this.lebar} <br>
+                    -${this.merk} <br>
+                    -${this.model} <br>
+                    `
+                )
+            }
+            this.belok = function () {
+                return 'Bus berbelok'
+            }
+            this.mangkir = function () {
+                return 'Bus sedang mangkir'
+            }
+            this.method = function () {
+                document.getElementById('method4').innerHTML = (
+                    `
+                    -${this.belok()} <br>
+                    -${this.mangkir()} <br>
+                    
+                    `
+                )
+            }
+        }
+
+        const tampilkan = new Transportasi()
+        tampilkan.obj()
+        tampilkan.prop()
+        tampilkan.method()
+
+
+        function Transportasi2() {
+            this.kendaraan = "Angkot"
+            this.lebar = "4m"
+            this.merk = "Daihatsu"
+            this.model = "KR 425"
+            this.obj = function () {
+                document.getElementById('obj5').innerHTML = (
+                    `${this.kendaraan}`
+                )
+            }
+            this.prop = function () {
+                document.getElementById('prop5').innerHTML = (
+                    `-${this.lebar} <br>
+                    -${this.merk} <br>
+                    -${this.model} <br>
+                    `
+                )
+            }
+            this.jalan = function () {
+                return 'Angkot sedang menunggu '
+            }
+            this.ngetem = function () {
+                return 'Angkot sedang ngetem'
+            }
+            this.method = function () {
+                document.getElementById('method5').innerHTML = (
+                    `
+                    -${this.jalan()} <br>
+                    -${this.ngetem()} <br>
+                    `
+                )
+            }
+        }
+         const tmpl = new Transportasi2()
+        tmpl.obj()
+        tmpl.prop()
+        tmpl.method()
+    </script>
+</body>
+
+</html>
